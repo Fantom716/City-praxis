@@ -1,42 +1,125 @@
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Black.woff2), url(/fonts/Roboto-Black.woff);
+  src: url("/fonts/Roboto-Black.woff2");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Bold.woff2), url(/fonts/Roboto-Bold.woff);
+  src: url(/fonts/Roboto-Bold.woff2);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Light.woff2), url(/fonts/Roboto-Light.woff);
+  src: url(/fonts/Roboto-Light.woff2);
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Medium.woff2), url(/fonts/Roboto-Medium.woff);
+  src: url(/fonts/Roboto-Medium.woff2);
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Regular.woff2), url(/fonts/Roboto-Regular.woff);
+  src: url(/fonts/Roboto-Regular.woff2);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Thin.woff2), url(/fonts/Roboto-Thin.woff);
+  src: url(/fonts/Roboto-Thin.woff2);
   font-weight: 100;
   font-style: normal;
 }
 
+html {
+  color: white;
+  font-family: "Roboto", "Times New Roman";
+  box-sizing: border-box;
+}
+
+header, section {
+  height: 100vh;
+}
+
+header {
+  background: linear-gradient(242.41deg, #2B2642 0%, #60272B 100%);
+}
+
+.header__top {
+  margin-bottom: 20vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__logo-img {
+  width: 200px;
+  max-width: 100%;
+}
+
+.menu-container {
+  display: flex;
+}
+
+.main-content {
+  flex-grow: 3;
+}
+
+.menu__item-list {
+  margin-bottom: 31px;
+  font-size: 1.40rem;
+  list-style-type: none;
+}
+
+.menu__item-list > a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu__item-list::before {
+  content: '';
+  background: lightgray;
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  margin-inline-end: 1ch;
+}
+
+.menu__item-list:last-child {
+  margin-bottom: 0px;
+}
+
+.title {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+}
+
+.page-title {
+  margin-bottom: 48px;
+}
+
+.page-subtitle {
+  text-align: center;
+}
+
+.about-me {
+  background-color: #152431;
+}
+
+.about-me__container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
