@@ -140,34 +140,39 @@ header {
   background-color: #152431;
 }
 
-.about-me__container {
+.about-me__container, .locate__container {
   display: flex;
   height: 100%;
   align-items: center;
 }
 
-.about-me__title {
+.about-me__title, .locate__title  {
   margin-bottom: 81px;
 }
 
-.about-me__main-content {
-  overflow: scroll;
-}
-
-.about__me-paragraph {
+.main-text {
   font-size: 1.4rem;
   line-height: 2rem;
   text-align: justify;
 }
 
-.about-me__container {
+.about-me__container, .locate__container {
   gap: 58px;
 }
 
-.about__me-paragraph:not(:last-child) {
+.main-paragraph:not(:last-child), iframe {
   margin-bottom: 20px;
 }
 
-.about__me-paragraph:last-child {
-  margin-bottom: 90px;
+.about-me__main-content, .locate__main-content {
+  height: 80%;
+  overflow-y: scroll;
+}
+
+#locate {
+  background: #375099;
+}
+
+#conclusion {
+  background: #D73E4D;
 }
