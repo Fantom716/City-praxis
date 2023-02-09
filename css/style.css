@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Black.woff2");
+  src: url(../fonts/Roboto-Black.woff);
   font-weight: 900;
   font-style: normal;
 }
@@ -14,28 +14,28 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Light.woff2);
+  src: url(../fonts/Roboto-Light.woff2);
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Medium.woff2);
+  src: url(../fonts/Roboto-Medium.woff2);
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Regular.woff2);
+  src: url(../fonts/Roboto-Regular.woff2);
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url(/fonts/Roboto-Thin.woff2);
+  src: url(../fonts/Roboto-Thin.woff2);
   font-weight: 100;
   font-style: normal;
 }
@@ -44,10 +44,20 @@ html {
   color: white;
   font-family: "Roboto", "Times New Roman";
   box-sizing: border-box;
+  font-size: 16px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 header, section {
   height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* Menu */
@@ -58,9 +68,8 @@ header, section {
   list-style-type: none;
 }
 
-.item-list > a {
+a {
   text-decoration: none;
-  color: white;
 }
 
 .item-list:before {
@@ -93,6 +102,16 @@ header, section {
 .about-me-menu__item-list:hover:before {
   content: '';
   background: #0064FF;
+}
+
+/* Menu hover effect (About me) */
+.data-protection-menu__item-list > a:hover {
+  color: #FF0000;
+}
+
+.data-protection-menu__item-list:hover:before {
+  content: '';
+  background: #FF0000;
 }
 
 header {
@@ -133,6 +152,7 @@ header {
 }
 
 .page-subtitle {
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -140,7 +160,10 @@ header {
   background-color: #152431;
 }
 
-.about-me__container, .locate__container {
+.about-me__container,
+.locate__container,
+.conclusion__container,
+.data-protection__container {
   display: flex;
   height: 100%;
   align-items: center;
@@ -156,7 +179,10 @@ header {
   text-align: justify;
 }
 
-.about-me__container, .locate__container {
+.about-me__container,
+.locate__container,
+.conclusion__container,
+.data-protection__container {
   gap: 58px;
 }
 
@@ -164,15 +190,105 @@ header {
   margin-bottom: 20px;
 }
 
-.about-me__main-content, .locate__main-content {
+.about-me__main-content,
+.locate__main-content,
+.conclusion__main-content {
   height: 80%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #locate {
   background: #375099;
+  scroll-snap-align: start;
 }
 
 #conclusion {
   background: #D73E4D;
+}
+
+.conclusion-topics-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 29px;
+}
+
+.conclusion__title {
+  margin-bottom: 156px;
+}
+
+.conclusion-topic {
+  margin-bottom: 72px;
+}
+
+.conclusion-main-text {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#data-protection {
+  height: auto;
+  color: #000;
+  padding-top: 80px;
+  line-height: 1.7rem;
+  text-align: justify;
+}
+
+.data-protection__title {
+  color: #000;
+  text-align: left;
+  margin-bottom: 63px;
+}
+
+.data-protection__subtitle, .data-protection__general-subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 63px;
+}
+
+.title-h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.data-protection__main-text {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.7rem;
+}
+
+.data-protection__general-title {
+  margin-bottom: 34px;
+}
+
+.data-protection__main-text {
+  margin-bottom: 26px;
+}
+
+.data-protection__title-topic {
+  margin-bottom: 34px;
+}
+
+.data-protection__general-text {
+  margin-bottom: 56px;
+}
+
+.main-text_strong {
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.data-protection__general-and-mandatory-list {
+  list-style-type: disc;
+  padding-left: 70px;
+}
+
+.data-protection__menu-list {
+  position: sticky;
+  align-self: flex-start;
+  top: calc(40vh - 80px);
+}
+
+.data-protection-menu__item-link {
+  color: #000;
 }
