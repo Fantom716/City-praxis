@@ -464,7 +464,7 @@ footer {
   .about-me__title, .locate__title, .conclusion__title {
     margin-bottom: 70px;
   }
-  .main-text {
+  .main-text, .footer__copyright-text {
     font-size: 1.14rem;
   }
   .item-list {
@@ -562,7 +562,7 @@ footer {
   .about-me__title, .locate__title {
     margin-bottom: 40px;
   }
-  .main-text {
+  .main-text, .footer__copyright-text {
     font-size: 1.03rem;
   }
   .item-list {
@@ -686,7 +686,7 @@ footer {
   .conclusion__title {
     margin-bottom: 40px;
   }
-  .main-text {
+  .main-text, .footer__copyright-text {
     font-size: 1rem;
     line-height: 1.8rem;
   }
