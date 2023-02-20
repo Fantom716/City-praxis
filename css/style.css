@@ -342,6 +342,59 @@ footer {
   font-size: 1.25rem;
 }
 
+.notification-cookie__wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  z-index: 999;
+}
+
+.notification-cookie {
+  transition: .4s;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  padding: 9px;
+  height: auto;
+  font-size: 1.12rem;
+  background: #DDDDE6;
+  box-shadow: 8px 2px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.notification-cookie__main-text {
+  color: #000;
+  width: 60%;
+  line-height: 1.8rem;
+}
+
+.notification-cookie__link {
+  color: #4A3AFF;
+  margin-right: 38px;
+}
+
+.notification-cookie__button {
+  color: #fff;
+  background-color: #4A3AFF;
+  border: 0px;
+  border-radius: 11px;
+  padding: 8.5px 46.5px;
+  height: 47px;
+}
+
+.notification-cookie__button:hover {
+  background-color: #3725ff;
+  transition: .4s;
+}
+
+.notification-cookie__link:hover {
+  text-decoration: underline;
+  transition: .4s;
+}
+
 @media (min-height: 0px) and (max-height: 1200px) {
   .about-me__main-content,
   .locate__main-content,
@@ -439,6 +492,17 @@ footer {
   .data-protection__menu-list {
     position: static;
   }
+
+  .notification-cookie {
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+  }
+  .notification-cookie__main-text {
+    color: #000;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Large */
@@ -524,6 +588,17 @@ footer {
   }
   .data-protection__menu-list {
     position: static;
+  }
+
+  .notification-cookie {
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+  }
+  .notification-cookie__main-text {
+    color: #000;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -618,10 +693,22 @@ footer {
   #data-protection {
     margin-bottom: 30px;
   }
+
+  /* cookie */
+
+  .notification-cookie {
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+  }
+  .notification-cookie__main-text {
+    color: #000;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Small */
-
 
 @media (max-width: 680px) {
   .container {
@@ -756,6 +843,54 @@ footer {
   }
   footer {
     padding: 7px;
+  }
+
+  /* cookie */
+
+  .notification-cookie__wrapper {
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+  }
+
+  .notification-cookie {
+    flex-direction: column;
+    gap: 15px;
+    width: 75%;
+    bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  
+  .notification-cookie__main-text {
+    color: #000;
+    width: 100%;
+    text-align: center;
+  }
+
+  .notification-cookie__button {
+    height: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .home-blur,
+  .about-me-blur,
+  .locate-blur,
+  .conclusion-blur,
+  .data-protection-blur {
+    filter: blur(1px);
+    transition: .3s;
+  }
+
+  #home,
+  #about-me,
+  #locate,
+  #conclusion,
+  #data-protection {
+    filter: blur(0px);
+    transition: .3s;
   }
 
     /* menu*/
