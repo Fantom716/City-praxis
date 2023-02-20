@@ -95,6 +95,16 @@ header, section {
   background: #678EFF;
 }
 
+/* Menu hover effect (Conclusion) */
+.conclusion-menu__item-list > a:hover {
+  color: #FF8894;
+}
+
+.conclusion-menu__item-list:hover:before {
+  content: '';
+  background: #FF8894;
+}
+
 /* Menu hover effect (Data protection, Home) */
 .data-protection-menu__item-list, .header-menu__item-list > a:hover {
   color: #FF0000;
@@ -406,14 +416,6 @@ footer {
     height: 80vh;
     overflow-y: auto;
   }
-  .main-content {
-    display: flex;
-    padding-right: 20px;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    padding-right: 20px;
-  }
 }
 
 /* Extra large */
@@ -464,11 +466,6 @@ footer {
   }
   .main-text {
     font-size: 1.14rem;
-  }
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
   .item-list {
     margin-bottom: 25px;
@@ -557,7 +554,7 @@ footer {
     width: 80%;
   }
   .title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .subtitle {
     font-size: 1.17rem;
@@ -586,7 +583,7 @@ footer {
     margin-bottom: 70px;
   }
   .data-protection__title, .data-protection__subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .data-protection__general-text {
     margin-bottom: 30px;
@@ -691,7 +688,7 @@ footer {
   }
   .main-text {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
   }
   .item-list {
     margin-bottom: 25px;
