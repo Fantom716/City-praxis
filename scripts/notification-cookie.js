@@ -1,12 +1,13 @@
 'use strict';
 
-const layout = '<div id="cookie" class="notification-cookie__wrapper"><div class="notification-cookie"><p class="notification-cookie__main-text">Wir verwenden Cookies. Wenn Sie weiter unsere Website besuchen, stimmen Sie der Cookie-Nutzung zu.</p><div class="notification-cookie__controls"><a href="https://ru.wikipedia.org/wiki/Cookie" class="notification-cookie__link">Detailiert</a><button class="notification-cookie__button">Akzeptiert</button></div></div></div>';
+const layout = '<div id="cookie" class="n-c__wrapper"><div class="n-c"><p class="n-c__main-text">Wir verwenden Cookies. Wenn Sie weiter unsere Website besuchen, stimmen Sie der Cookie-Nutzung zu.</p><div class="n-c__controls"><a href="https://ru.wikipedia.org/wiki/Cookie" class="n-c__link">Detailiert</a><button class="n-c__button">Akzeptiert</button></div></div></div>';
+const checkCookie = document.cookie.split("; ").find((row) => row.startsWith("notificationCookie"));
 
-if (document.cookie === "") {
+if (checkCookie === undefined) {
 
     window.onload = function() {
         document.body.insertAdjacentHTML("afterbegin", layout);
-        const notificationBtn = document.querySelector(".notification-cookie__button");
+        const notificationBtn = document.querySelector(".n-c__button");
 
         notificationBtn.addEventListener('click', popupCookie);
     }
@@ -16,11 +17,10 @@ if (document.cookie === "") {
         let expiresCookie = new Date();
         expiresCookie.getFullYear(expiresCookie.setFullYear(dateAcceptCookie.getFullYear() + 1));
         document.cookie = `notificationCookie=${dateAcceptCookie};expires=${expiresCookie}`;
-        const notificationWrapper = document.querySelector(".notification-cookie__wrapper").classList.add("notification-cookie-hide");
+        const notificationWrapper = document.querySelector(".n-c__wrapper").classList.add("n-c-hide");
         const cookie = document.querySelector("#cookie")
         setTimeout(() => { cookie.remove() }, 1000);
     }
-}
-else {
+} else {
     {};
 }

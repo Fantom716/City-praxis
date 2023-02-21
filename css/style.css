@@ -352,7 +352,7 @@ footer {
   font-size: 1.25rem;
 }
 
-.notification-cookie__wrapper {
+.n-c__wrapper {
   position: fixed;
   left: 0;
   right: 0;
@@ -360,7 +360,7 @@ footer {
   z-index: 999;
 }
 
-.notification-cookie {
+.n-c {
   margin: auto;
   display: flex;
   align-items: center;
@@ -374,18 +374,18 @@ footer {
   border-radius: 10px;
 }
 
-.notification-cookie__main-text {
+.n-c__main-text {
   color: #000;
   width: 60%;
   line-height: 1.8rem;
 }
 
-.notification-cookie__link {
+.n-c__link {
   color: #4A3AFF;
   margin-right: 38px;
 }
 
-.notification-cookie__button {
+.n-c__button {
   color: #fff;
   background-color: #4A3AFF;
   border: 0px;
@@ -394,17 +394,17 @@ footer {
   height: 47px;
 }
 
-.notification-cookie__button:hover {
+.n-c__button:hover {
   background-color: #3725ff;
   transition: .4s;
 }
 
-.notification-cookie__link:hover {
+.n-c__link:hover {
   text-decoration: underline;
   transition: .4s;
 }
 
-.notification-cookie-hide {
+.n-c-hide {
   opacity: 0;
   transition: 1s;
 }
@@ -413,6 +413,8 @@ footer {
   .about-me__main-content,
   .locate__main-content,
   .conclusion__main-content {
+    display: block;
+    padding-right: 20px;
     height: 80vh;
     overflow-y: auto;
   }
@@ -509,12 +511,12 @@ footer {
     align-self: center;
   }
 
-  .notification-cookie {
+  .n-c {
     flex-direction: column;
     gap: 15px;
     width: 50%;
   }
-  .notification-cookie__main-text {
+  .n-c__main-text {
     color: #000;
     width: 100%;
     text-align: center;
@@ -612,13 +614,13 @@ footer {
 
   /* cookie */
 
-  .notification-cookie {
+  .n-c {
     flex-direction: column;
     gap: 15px;
     width: 50%;
     font-size: 1.12rem;
   }
-  .notification-cookie__main-text {
+  .n-c__main-text {
     color: #000;
     width: 100%;
     text-align: center;
@@ -737,13 +739,13 @@ footer {
 
   /* cookie */
 
-  .notification-cookie {
+  .n-c {
     flex-direction: column;
     gap: 15px;
     width: 50%;
     font-size: 1.05rem;
   }
-  .notification-cookie__main-text {
+  .n-c__main-text {
     color: #000;
     width: 100%;
     text-align: center;
@@ -890,29 +892,30 @@ footer {
 
   /* cookie */
 
-  .notification-cookie__wrapper {
+  .n-c__wrapper {
     height: 100%;
     width: 100%;
     bottom: 0;
-    display: flex;
   }
 
-  .notification-cookie {
+  .n-c {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
     flex-direction: column;
     gap: 15px;
     width: 75%;
-    bottom: 0;
     font-size: 0.9rem;
     line-height: 1rem;
   }
 
-  .notification-cookie__main-text {
+  .n-c__main-text {
     color: #000;
     width: 100%;
     text-align: center;
   }
 
-  .notification-cookie__button {
+  .n-c__button {
     height: 40px;
     padding-right: 15px;
     padding-left: 15px;
