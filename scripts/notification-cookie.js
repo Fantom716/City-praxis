@@ -16,7 +16,7 @@ if (checkCookie === undefined) {
         let dateAcceptCookie = new Date();
         let expiresCookie = new Date();
         expiresCookie.getFullYear(expiresCookie.setFullYear(dateAcceptCookie.getFullYear() + 1));
-        document.cookie = `notificationCookie=${dateAcceptCookie};expires=${expiresCookie}`;
+        document.cookie = `notificationCookie=${dateAcceptCookie};expires=${expiresCookie};samesite=lax`;
         const notificationWrapper = document.querySelector(".n-c__wrapper").classList.add("n-c-hide");
         const cookie = document.querySelector("#cookie")
         setTimeout(() => { cookie.remove() }, 1000);
