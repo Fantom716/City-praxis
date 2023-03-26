@@ -365,7 +365,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  width: 90%;
   padding: 9px;
   height: auto;
   font-size: 1.12rem;
@@ -376,7 +376,7 @@ footer {
 
 .n-c__main-text {
   color: #000;
-  width: 60%;
+  width: 50%;
   line-height: 1.8rem;
 }
 
@@ -387,15 +387,28 @@ footer {
 
 .n-c__button {
   color: #fff;
-  background-color: #4A3AFF;
   border: 0px;
   border-radius: 11px;
   padding: 8.5px 46.5px;
   height: 47px;
 }
 
-.n-c__button:hover {
+.n-c__button_agreement {
+  background-color: #4A3AFF;
+  margin-right: 25px;
+}
+
+.n-c__button_agreement:hover {
   background-color: #3725ff;
+  transition: .4s;
+}
+
+.n-c__button_refusal {
+  background-color: #FF70B4;
+}
+
+.n-c__button_refusal:hover {
+  background-color: #ff51a5;
   transition: .4s;
 }
 
@@ -617,7 +630,7 @@ footer {
   .n-c {
     flex-direction: column;
     gap: 15px;
-    width: 50%;
+    width: 60%;
     font-size: 1.12rem;
   }
   .n-c__main-text {
@@ -742,7 +755,7 @@ footer {
   .n-c {
     flex-direction: column;
     gap: 15px;
-    width: 50%;
+    width: 70%;
     font-size: 1.05rem;
   }
   .n-c__main-text {
@@ -893,9 +906,9 @@ footer {
   /* cookie */
 
   .n-c__wrapper {
-    height: 100%;
-    width: 100%;
-    bottom: 0;
+    height: auto;
+    width: auto;
+    bottom: 100px;
   }
 
   .n-c {
@@ -903,7 +916,7 @@ footer {
     bottom: 10%;
     left: 10%;
     flex-direction: column;
-    gap: 15px;
+    gap: 5%;
     width: 75%;
     font-size: 0.9rem;
     line-height: 1rem;
@@ -917,8 +930,23 @@ footer {
 
   .n-c__button {
     height: 40px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .n-c__button_agreement {
+    margin-right: 3%;
+  }
+
+  .n-c__link {
+    margin-right: 3%;
+  }
+
+  .n-c__controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
     /* menu*/
